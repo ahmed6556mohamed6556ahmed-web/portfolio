@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>معرض أعمال أحمد</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav">
+  <a href="#home" class="logo">أحمد<span>.</span></a>
+  <nav id="links">
+    <a href="#about">عني</a><a href="#skills">مهاراتي</a><a href="#projects">مشاريعي</a><a href="#contact">تواصل</a>
+  </nav>
+  <button id="theme" aria-label="تغيير الوضع">🌙</button>
+</header>
+
+<section id="home" class="hero">
+  <p class="tag">مطوّر مواقع</p>
+  <h1>أهلاً، أنا <span class="grad" id="name">أحمد</span></h1>
+  <p class="lead">بعمل مواقع ومشاريع بـ HTML وCSS وJavaScript. شوف شغلي تحت.</p>
+  <div class="cta"><a class="btn" href="#projects">شوف المشاريع</a><a class="btn ghost" href="#contact">كلمني</a></div>
+</section>
+
+<section id="about" class="sec">
+  <h2>عني</h2>
+  <p class="about">أنا من الزقازيق، شرقية. بحب البرمجة وبعمل مشاريع كتير وبتعلم كل يوم حاجة جديدة. (عدّل النص ده بنفسك من ملف index.html.)</p>
+  <div class="stats">
+    <div><b data-n="20">20</b><span>مشروع</span></div>
+    <div><b data-n="3">3</b><span>لغات</span></div>
+    <div><b data-n="100">100</b><span>% شغف</span></div>
+  </div>
+</section>
+
+<section id="skills" class="sec">
+  <h2>مهاراتي</h2>
+  <div class="skills">
+    <div class="skill"><span>HTML</span><i style="--w:90%"></i></div>
+    <div class="skill"><span>CSS</span><i style="--w:85%"></i></div>
+    <div class="skill"><span>JavaScript</span><i style="--w:75%"></i></div>
+    <div class="skill"><span>Git / GitHub</span><i style="--w:60%"></i></div>
+  </div>
+</section>
+
+<section id="projects" class="sec">
+  <h2>مشاريعي</h2>
+  <div class="filters" id="filters"></div>
+  <div class="grid" id="grid"></div>
+  <p class="empty" id="empty" hidden>مفيش مشاريع هنا لسه.</p>
+
+  <details class="adder" id="adder">
+    <summary>＋ أضف مشروع جديد</summary>
+    <form id="form">
+      <label>اسم المشروع<input name="title" required maxlength="60"></label>
+      <label>وصف قصير<textarea name="desc" required maxlength="200" rows="3"></textarea></label>
+      <label>النوع<input name="tag" placeholder="ويب / لعبة / تطبيق" maxlength="20"></label>
+      <label>لينك المشروع (اختياري)<input name="url" type="url" placeholder="https://"></label>
+      <label>لينك صورة (اختياري)<input name="img" type="url" placeholder="https://"></label>
+      <button class="btn" type="submit">حفظ المشروع</button>
+    </form>
+    <p class="hint">المشاريع بتتحفظ في متصفحك على الجهاز ده.</p>
+    <div class="tools"><button class="btn ghost small" id="export">تصدير نسخة احتياطية</button><button class="btn ghost small" id="reset">رجّع المشاريع التجريبية</button></div>
+  </details>
+</section>
+
+<section id="contact" class="sec">
+  <h2>تواصل معايا</h2>
+  <form id="contactForm" class="contact">
+    <input name="n" placeholder="اسمك" required>
+    <input name="e" type="email" placeholder="إيميلك" required>
+    <textarea name="m" rows="4" placeholder="رسالتك" required></textarea>
+    <button class="btn" type="submit">ابعت</button>
+    <p id="sent" hidden>وصلتني رسالتك، شكراً! (ده نموذج تجريبي، اربطه بإيميلك لاحقاً)</p>
+  </form>
+</section>
+
+<footer>© <span id="yr"></span> أحمد. كل الحقوق محفوظة.</footer>
+<script src="script.js"></script>
+</body>
+</html>
